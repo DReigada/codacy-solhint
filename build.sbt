@@ -5,3 +5,7 @@ lazy val root = (project in file(".")).settings(
   name := "codacy-solhint",
   libraryDependencies ++= Seq(codacySeed, scalaTest % Test)
 )
+
+mainClass in Compile := Some("codacy.Engine")
+enablePlugins(JavaAppPackaging)
+enablePlugins(DockerPlugin)
